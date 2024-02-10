@@ -44,7 +44,7 @@ python manage.py runserver
 ```
 
 ## Использование
-У проекта имеется OpenApi документация. Она доступна по адресам api/redoc/ или api/swagger/
+У проекта имеется OpenApi документация. Она доступна по адресам `api/redoc/` или `api/swagger/`
 
 ### Создание поста
 
