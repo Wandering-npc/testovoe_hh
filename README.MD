@@ -37,7 +37,12 @@ pip install -r requirements.txt
 python manage.py migrate
 ```
 
-6. Запустите сервер:
+6. Создайте суперюзера:
+
+```bash
+python manage.py createsuperuser
+```
+7. Запустите сервер:
 
 ```bash
 python manage.py runserver
@@ -54,7 +59,6 @@ python manage.py runserver
 
 ```json
 {
-  "user": 1,
   "title": "Новый пост",
   "text": "Текст нового поста",
   "published": true
