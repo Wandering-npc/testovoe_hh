@@ -1,6 +1,6 @@
 # Блог API
 
-Привет! Этот проект представляет собой простое API для управления постами в блоге, разработанное с использованием Django и Django REST Framework.
+Этот проект представляет собой простое API для управления постами в блоге, разработанное с использованием Django и Django REST Framework.
 
 ## Установка
 
@@ -9,7 +9,7 @@
 1. Клонируйте репозиторий:
 
 ```bash
-git clone https://github.com/your_username/blog-api.git
+git clone https://github.com/Wandering-npc/blog-api.git
 ```
 
 2. Перейдите в директорию проекта:
@@ -37,13 +37,19 @@ pip install -r requirements.txt
 python manage.py migrate
 ```
 
-6. Запустите сервер:
+6. Создайте суперюзера:
+
+```bash
+python manage.py createsuperuser
+```
+7. Запустите сервер:
 
 ```bash
 python manage.py runserver
 ```
 
 ## Использование
+У проекта имеется OpenApi документация. Она доступна по адресам `api/redoc/` или `api/swagger/`
 
 ### Создание поста
 
@@ -53,7 +59,6 @@ python manage.py runserver
 
 ```json
 {
-  "user": 1,
   "title": "Новый пост",
   "text": "Текст нового поста",
   "published": true
@@ -64,9 +69,9 @@ python manage.py runserver
 
 Чтобы получить список всех постов, отправьте GET запрос на `/api/posts/`.
 
-### Получение одного поста
+### Работа с одним постом
 
-Чтобы получить информацию о конкретном посте, отправьте GET запрос на `/api/posts/{post_id}/`, где `{post_id}` - идентификатор поста.
+Для просмотра, редактирования, удаления поста направье соответсвующий запрос на `/api/posts/{post_id}/`, где `{post_id}` - идентификатор поста.
 
 ## Тестирование
 
@@ -75,4 +80,5 @@ python manage.py runserver
 ```bash
 python manage.py test
 ```
-### Update
+
+
